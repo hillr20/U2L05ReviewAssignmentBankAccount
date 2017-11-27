@@ -55,11 +55,19 @@ public class BankAccount {
 		
 	}
 	
-	private void setlowestBalance(int withdraw) {
-		return ;
+	private void setBalance(int withdraw) {
+		if (currentBalance > 0) {
+			System.out.println(currentBalance);
+			
+		}
+		else {
+			System.out.println("Your current balance is below zero.");
+		}
+			
 	}
 	
-	private void getlowestBalance (int amount) {
+	private int getBalance (int currentBalance) {
+		return currentBalance;
 		
 	}
 	
