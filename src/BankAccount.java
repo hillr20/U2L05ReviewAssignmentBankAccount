@@ -25,12 +25,13 @@ public class BankAccount {
 				
 	}
 	
-	public void withdraw(int withdraw, String yes) {
+	public void withdraw(int withdraw) {
+		//don't need 'String yes'
 		//double currentBalance;
 		//System.out.println("Do you want to withdraw?");
 		String ans = JOptionPane.showInputDialog("Do you want to withdraw? Answer yes or no.");
 		//String yes;
-		if (ans == yes) {
+		if (ans.equals("yes")) {
 			currentBalance = currentBalance - withdraw;	
 			System.out.println("Your current balance is " + currentBalance);
 		}
@@ -68,6 +69,12 @@ public class BankAccount {
 	
 	private int getBalance (int currentBalance) {
 		return currentBalance;
+		
+	}
+	public String toString(){
+		String info = "Ricarda Hill's account holds" + currentBalance + " with a lowest"
+				+ "allowable balance of " + lowestBalance;
+		return info;
 		
 	}
 	
